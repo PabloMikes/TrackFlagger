@@ -1,0 +1,18 @@
+{
+  "name": "trackflagger",
+  "version": "1.0.0",
+  "description": "**Know how much a website tracks you.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+  
+}

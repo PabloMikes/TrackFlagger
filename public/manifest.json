@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Score",
+  "version": "0.1",
+  "description": "Know how much a website tracks you.",
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }
+  ]
+}
