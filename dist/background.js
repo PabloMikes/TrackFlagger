@@ -1,1 +1,0 @@
-var e=[];chrome.webRequest.onCompleted.addListener(t=>{e.push(t.url)},{urls:[`<all_urls>`]}),chrome.runtime.onMessage.addListener((t,n,r)=>{t.type===`GET_REQUESTS`&&r({requests:e})});
