@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Privacy Score</title>
+  <meta charset="UTF-8">
+  <title>TrackFlagger</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div id="score">Loading...</div>
-  <div id="trackers"></div>
+  <div class="container">
+    <header>
+      <h1>TrackFlagger</h1>
+    </header>
+
+    <div class="score-container">
+      <div id="score-circle" class="circle">
+        <span id="score">--</span>
+      </div>
+      <p class="label">Privacy Score</p>
+    </div>
+
+    <div class="stats">
+      <h3>Detected Trackers</h3>
+      <div id="trackers" class="tracker-list">Analyzing...</div>
+    </div>
+  </div>
+
   <script type="module" src="./popup.js"></script>
 </body>
 </html>
