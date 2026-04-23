@@ -30,6 +30,5 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     sendResponse({
       requests: tabRequests[msg.tabId] || []
     });
-    return true;
   }
 });

@@ -1,0 +1,9 @@
+{
+    "trackers":[
+            { "name": "Google Analytics", "patterns":[ "google-analytics.com" ]},
+            { "name": "Facebook Pixel", "patterns": ["facebook.com/tr"] },
+            { "name": "DoubleClick", "patterns": ["doubleclick.net"] },
+            { "name": "Google Ads", "patterns": ["googlesyndication.com"] },
+            { "name": "Meta Tracker", "patterns": ["fbcdn.net"] }
+    ]
+}

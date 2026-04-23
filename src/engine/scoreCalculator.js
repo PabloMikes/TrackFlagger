@@ -1,7 +1,9 @@
 export function calculateScore({ trackers }) {
   let score = 100;
 
-  score -= trackers.length * 10;
+  score -= trackers.length * 15;
 
-  return Math.max(score, 0);
+  if (score < 0) score = 0;
+
+  return score;
 }
