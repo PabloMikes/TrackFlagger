@@ -1,10 +1,14 @@
 import { detectTrackers } from "./src/engine/trackerDetector.js";
 import { calculateScore } from "./src/engine/scoreCalculator.js";
 
-chrome.runtime.sendMessage({ type: "GET_REQUESTS" }, (response) => {
-  const trackers = detectTrackers(response.requests);
-  const score = calculateScore({ trackers });
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  const tabId = tabs[0].id;
 
-  document.getElementById("score").innerText =
-    "Privacy Score: " + score;
+  chrome.runtime.sendMessage(
+    { type: "GET_REQUESTS", tabId },
+    (response) => {
+      document.getElementById("score").innerText =
+        "Requests: " + response.requests.length;
+    }
+  );
 });
